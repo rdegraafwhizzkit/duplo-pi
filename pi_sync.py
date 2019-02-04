@@ -1,3 +1,8 @@
+import sys
+
+if sys.platform == 'darwin':
+    sys.path.append('stubs')
+
 import RPi.GPIO as GPIO
 import atexit
 
