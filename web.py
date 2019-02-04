@@ -1,12 +1,12 @@
 from flask import Flask
 import json
-from dummy_sync import DummySync
-# from pi_sync import PISync
+# from dummy_sync import DummySync
+from pi_sync import PISync
 
 app = Flask(__name__, static_url_path='/static')
 
-sync_object = DummySync()
-# sync_object = PISync()
+# sync_object = DummySync()
+sync_object = PISync()
 
 def state(status):
     return json.dumps(status), 200, {'Content-Type': 'application/json; charset=utf-8'}
