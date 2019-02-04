@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="/assets/styling/Global.Bundle-ad18f3215c4fee505bd2a06dabfb0958170a1ca2.css" />
+<link rel="stylesheet" type="text/css" href="/assets/styling/Base.Bundle-8e864add2fc66bc7078a4c14fbf261428ef87a67.css" />
+<link rel="stylesheet" type="text/css" href="/assets/libs/Agent/Agent.Bundle-3d7f2b91889ed710e4a73049754e148b0de93993.css" />
+<script type="text/javascript" src="/assets/libs/MIC/Mic.Core.Bundle-1fb45135440df5e8efaab05541bf8995cd47d311.js"></script>
+<script type="text/javascript" src="/assets/libs/Base/Base.Bundle-6e830a8280a9c104159780d201bc542f6caa7b7a.js" defer="defer"></script>
+<script type="text/javascript" src="/assets/libs/FontAwesomePro5.2/js/FontAwesome.Bundle-c54ba14ba9e054e1191aaa16d766ce66f935e609.js" defer="defer"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+                    var MicDebug = false;
+                    var MIC_INIT_OBJ = {   MIC_PARAMETERS: {       ACCOUNT: {"newAgentMode":true,"legacyMode":false,"newSettingsMode":true,"operationModuleEnabled":true,"allowAdvancedOperations":true,"assetManagementEnabled":false,"ticketsSystem":false,"archiveIntervalTime":"P0Y1M0D","authorisedUsersEnabled":false,"endpointsEnabled":false,"ticketIntegration":"none","zendeskSubomain":null,"zendeskApiToken":null,"freshdeskSubomain":null,"salesdeskSubomain":null}   },   MIC_TRANSLATIONS: {"jstranslations":{"sEmptyTable":"No data available in the table overview","sInfo":"Showing _START_ to _END_ of _TOTAL_ entries","sInfoEmpty":"Showing 0 to 0 of 0 entries","sInfoFiltered":"(filtered from _MAX_ total entries)","sLengthMenu":"Show _MENU_ entries","sLoadingRecords":"Loading...","sProcessing":"Processing...","sSearch":"Search:","sZeroRecords":"No matching items found","sFirst":"First","sLast":"Last","sNext":"Next","sPrevious":"Previous","sSortAscending":": Activate to sort ascending","sSortDescending":": Activate to sort descending","notFound":": Nothing found"}},   MIC_PAGE_STATE: {"title":"12Return - Returns","layout":"application.modules.agent.views.layouts.layout-default","template":"application.modules.agent.views.layouts.templates.default","templateUpdateRequired":false,"menus":{"mainmenu_left":{"menu":"agent-service-main-top","active":"returns"},"sidemenu_left":false}},   MIC_PAGE_CONFIG: {"styling":{"variables":[]},"tablePresets":[],"sections":{"template":{"enabled":true,"widget":[],"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":"fadeOut"}}},"main":{"enabled":true,"widget":[],"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":"fadeOut"}}},"title":{"enabled":true,"widget":{"view":"title","path":"application.modules.agent.views.layouts."},"options":{"animation":{"open":"slideInDown","replace":false,"close":"slideOutUp"}}},"breadcrumbs":{"enabled":true,"widget":{"view":"breadcrumbs","path":"application.modules.agent.views.layouts."},"options":{"animation":{"open":"slideInDown","replace":false,"close":"slideOutUp"}}}},"areas":{"asset_form":{"widget":{"path":"application.modules.agent.modules.operations.views.asset.unpack."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"inspect_asset_form":{"widget":{"path":"application.modules.agent.modules.operations.views.asset.inspect."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"asset_overview":{"widget":{"path":"application.modules.agent.modules.operations.views.asset.unpack."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"workOrder_form":{"widget":{"path":"application.modules.agent.modules.operations.views.workOrder."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"inspect_asset_overview":{"widget":{"path":"application.modules.agent.modules.operations.views.asset.inspect."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"filterbar_left":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":false,"close":false},"showLoadingOverlay":true}},"filterbar_left_asset_details_workflow":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":false,"replace":false,"close":false},"showLoadingOverlay":true}},"filterbar_left_return_details_workflow":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":false,"replace":false,"close":false},"showLoadingOverlay":true}},"widgetbar_right":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"message_overview":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"shipment_additional":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"shipment_submit":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"items_overview":{"widget":{"path":"application.modules.agent.views.product.areas.","view":"_items-overview"},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"user_returns":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"user_profile_image":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"servicetask_overview":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"servicetask_files":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"find_user_result":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"state_area":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"services_area":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"unpack-container":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"carrier_area":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"return-draft-product-subgroup":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"return-draft-product-articles":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"return-draft-product-form":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}},"container-move-assets":{"widget":{"path":"application.modules.agent.views.layouts.area."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"showLoadingOverlay":true}}},"menus":{"areas":{"return_details_sidemenu":{"widget":{"activeClass":"c-filter__menu__list__item__link--is-active","path":"application.modules.agent.views.returns.menus."},"options":{"animation":{"open":false,"replace":false,"close":false},"activeClass":"c-filter__menu__list__item__link--is-active"}},"asset_details_sidemenu":{"widget":{"activeClass":"c-filter__menu__list__item__link--is-active","path":"application.modules.agent.views.asset.menus."},"options":{"animation":{"open":false,"replace":false,"close":false},"activeClass":"c-filter__menu__list__item__link--is-active"}},"default_level3_menu":{"widget":{"activeClass":"c-filter__menu__list__item__link--is-active","path":"application.modules.agent.modules.settings.views.menus."},"options":{"animation":{"open":false,"replace":false,"close":false},"activeClass":"c-filter__menu__list__item__link--is-active"}},"product_group_details_sidemenu":{"widget":{"activeClass":"c-filter__menu__list__item__link--is-active","path":"application.modules.agent.modules.settings.views.menus."},"options":{"animation":{"open":false,"replace":false,"close":false},"activeClass":"c-filter__menu__list__item__link--is-active"}},"mainmenu_left":{"widget":{"activeClass":"c-mainmenu__list__item--is-active","path":"application.modules.agent.views.layouts.menu."},"options":{"animation":{"open":false,"replace":"fadeIn","close":false},"activeClass":"c-mainmenu__list__item--is-active"}},"sidemenu_left":{"widget":{"activeClass":"c-left__menu__list__item--is-active","path":"application.modules.agent.views.layouts.menu."},"options":{"animation":{"open":"fadeIn","replace":"fadeIn","close":false},"activeClass":"c-left__menu__list__item--is-active"}}}}},   MIC_PAGE_AREAS: {"filterbar_left":{"path":"application.modules.agent.modules.service.views.returns.areas.","view":"_table_sidebar"},"widgetbar_right":{"path":"application.modules.agent.views.layouts.area.","view":"widgetbar_right"}},   MIC_DEBUG: false}
+/*]]>*/
+</script>
+<title>12Return - Returns</title>    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    </head>
+<body>
+<div class='remodal-bg'>
+    <div class="o-wrapper">
+        <nav class="c-mainmenu area--exist" data-menu-area="mainmenu_left"><div class="c-mainmenu__toggle">
+    <i class="c-mainmenu__toggle__trigger fal fa-fw fa-align-justify js-filter-toggle"></i>
+</div>
+<ul class="c-mainmenu__list">
+            <li class="c-mainmenu__list__item " data-menu-item="dashboard">
+            <a href="/agent/service/dashboard/index" class="c-mainmenu__list__item__link js-tooltip-right js-open-page-link" title="Dashboard">
+                                    <i class="icon-menu-dashboard c-mainmenu__list__item__link__icon"></i>
+                            </a>
+        </li>
+
+                <li class="c-mainmenu__list__item  c-mainmenu__list__item--is-active " data-menu-item="returns">
+            <a href="/agent/service/returns/index" class="c-mainmenu__list__item__link js-tooltip-right js-open-page-link" title="Returns">
+                                    <i class="icon-menu-returns c-mainmenu__list__item__link__icon"></i>
+                            </a>
+        </li>
+
+                <li class="c-mainmenu__list__item " data-menu-item="users">
+            <a href="/agent/service/user/index" class="c-mainmenu__list__item__link js-tooltip-right js-open-page-link" title="Customers">
+                                    <i class="icon-menu-users c-mainmenu__list__item__link__icon"></i>
+                            </a>
+        </li>
+
+    </ul>
+<div class="c-mainmenu__icon">
+    <img src="/assets/3dc6163a/images//portalSelect/service_portal.svg" title="Service"class="o-avatar u-colored-white u-colored--bordered js-tooltip-right" title="service module" />
+</div></nav>
+        <div class="c-left area--hidden" data-menu-area="sidemenu_left"></div>
+        <div class="c-filter area--exist" data-area="filterbar_left">
+            <div class="c-filter__title area--exist" data-page-section="title" >
+    <a href="" class="c-filter__title__toggle js-close-filterpanel">
+        <i class="fal fa-fw fa-arrow-square-left"></i>
+    </a>
+    <span>Returns</span></div>
+<div class="c-filter__menu">
+    <ul class="c-filter__menu__list">
+        <li class="c-filter__menu__list__item">
+            <span class="c-filter__menu__list__item__title">
+                Return overview            </span>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <div class="c-filter__menu__list__item__pulldown o-multi-button js-hover-intent">
+                <span class="o-multi-button__title u-colored-lgrey u-colored-lgrey--hover-highlight u-minWidth-12">
+                    <i class="fal fa-fw fa-caret-down"></i> Bulk return options                </span>
+                <ul class="o-multi-button__list">
+                    <li class="o-multi-button__list__item"><a class="js-open-page-link" href="/agent/service/returns/bulk?action=cancel">Cancel returns</a></li>
+                    <li class="o-multi-button__list__item"><a class="js-open-page-link" href="/agent/service/returns/bulk?action=complete">Complete returns</a></li>
+                    <li class="o-multi-button__list__item"><a class="js-open-page-link" href="/agent/service/returns/bulk?action=archive">Archive returns</a></li>
+                </ul>
+            </div>
+<!--
+            <div class="c-filter__menu__list__item__pulldown o-multi-button js-hover-intent">
+                <span class="o-multi-button__title u-colored-lgrey u-colored-lgrey--hover-highlight u-minWidth-12">
+                    <i class="fal fa-fw fa-caret-down"></i> Export options                </span>
+                <ul class="o-multi-button__list">
+                    <li class="o-multi-button__list__item"><a href="">Excel file</a></li>
+                    <li class="o-multi-button__list__item"><a href="">CSV file</a></li>
+                </ul>
+            </div>-->
+        </li>
+        <li class="c-filter__menu__list__item">
+            <span class="c-filter__menu__list__item__title">
+                Available actions            </span>
+        </li>
+
+        <li class="c-filter__menu__list__item">
+            <div class="c-filter__menu__list__item__pulldown o-multi-button js-hover-intent">
+                <span class="o-multi-button__title u-colored-blue u-colored-blue--hover-highlight u-minWidth-12">
+                    <i class="fal fa-fw fa-caret-down"></i> Create new return                </span>
+                <ul class="o-multi-button__list">
+                                            <li class="o-multi-button__list__item"> <span>Controlled</span></li>
+                                                    <li class="o-multi-button__list__item">
+                                <a class="js-open-page-link" href="/agent/service/draftReturnLink/selectReturnType?type=controlledprefilled">
+                                    Authorized return (with pre-authorized return link)                                </a>
+                            </li>
+                                                    <li class="o-multi-button__list__item">
+                                <a class="js-open-page-link" href="/agent/service/draftReturnLink/selectReturnType?type=controlledagent">
+                                    Return created by agent                                </a>
+                            </li>
+                                                </li>
+                                    </ul>
+            </div>
+        </li>
+                <li class="c-filter__menu__list__item">
+            <span class="c-filter__menu__list__item__title">
+                Table filters                <span class="js-tooltip-right"  title="Table filters sort all returns to an aggregated level: Active, All, and Archived">
+                    <i class="fal fa-question-circle"></i>
+                </span>
+            </span>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-active--table"  />
+                <span>Active returns</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-all--table"  />
+                <span>All returns</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-archived--table"  />
+                <span>Archived returns</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <span class="c-filter__menu__list__item__title">
+                Action filters                <span class="js-tooltip-right"  title="Action filters sort all active returns to a specific action in the returns process: Authorization, Logistics, Processing, and Settlement">
+                    <i class="fal fa-question-circle"></i>
+                </span>
+            </span>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-authorization--table"  />
+                <span>Authorization</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-logistics--table"  />
+                <span>Shipment & Pickup</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter ">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter" name="table_filter" value="returns-service-processing--table"  />
+                <span>Receiving & Checkin</span>
+            </label>
+        </li>
+        <li class="c-filter__menu__list__item">
+            <label class="c-filter__menu__list__item__filter c-filter__menu__list__item__filter--checked">
+                <input type="radio" class="c-filter__menu__list__item__filter__radio js-table-filter " name="table_filter" value="returns-service-settlement--table" checked />
+                <span>Settlement & Completion</span>
+            </label>
+        </li>
+    </ul>
+</div>
+<script>
+    $(function () {
+        $('.js-table-filter').change(function(e){
+            $('.c-filter__menu__list__item__filter--checked').removeClass('c-filter__menu__list__item__filter--checked');
+            $(this).parent().addClass('c-filter__menu__list__item__filter--checked');
+            MIC.request({
+                url: $.appendToQueryString('filter', $(this).val(),'/agent/service/returns/index'),
+                showLoadingOverlay:true,
+            });
+        });
+    });
+</script>        </div>
+        <div class="c-content">
+            <div class="c-header">
+                <div class="c-header-title area--exist" data-page-section="title">
+                    <span>Returns</span>                </div>
+                                  <div class="c-searchbar">
+                      <i class="fal fa-fw fa-lg fa-search c-searchbar__search-icon"></i>
+                      <input type="text" value="" placeholder="search for returns or users..." class="o-form__label__field o-form__label__field--inline c-searchbar__field js-global-search" data-url="/agent/service/search" />
+                      <a href="" class="o-button o-button--inline-block u-maxWidth-10 u-minWidth-5 u-colored-white u-colored-white--hover-highlight js-global-search-trigger">
+                          <i class="fal fa-fw fa-lg fa-search"></i>Search                      </a>
+                  </div>
+
+
+
+                                                <div class="c-header__widget">
+                    <div class="o-avatar u-colored-white u-colored-white--hover-highlight u-colored--bordered js-open-widgetpanel">
+                        <i class="fal fa-clone"></i>
+                    </div>
+                </div>
+                                <div class="c-header__profile">
+                    <div href="#" class="c-header__profile__link o-multi-button js-hover-intent">
+                        <span class="c-header__profile__link__name"><i class="fal fa-fw fa-caret-down"></i>Mrs. Hannah Verhoeff</span>
+                            <span class="o-avatar u-colored-blue"><i class="fal fa-fw fa-user"></i></span>
+                        <ul class="o-multi-button__list o-multi-button__list--page-header-profile">
+                            <li class=" o-multi-button__list__item">
+                                <a href="/agent/serviceSelect/index">
+                                    Switch agent module                                </a>
+                            </li>
+                            <li class=" o-multi-button__list__item">
+                                <a href="#" data-elevio-article="index">
+                                    Help center                                </a>
+                            </li>
+
+                            <li class=" o-multi-button__list__item">
+                                <a href="/agent/user/logout">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="c-breadcrumb area--exist" data-page-section="breadcrumbs">
+                                        <a href="/agent/service/dashboard" class=" js-open-page-link"  title="Dashboard">Dashboard</a>
+
+         /
+                            <span class="">Returns</span>
+
+
+                </div>
+            <div class="c-content__main" data-page-section="template">
+
+<div class="c-content__main__area c-content__main__area--fullWidth c-content__main__area--padding" data-page-section="main">
+    <div class="c-area-bar">
+        <div class="c-area-bar__padding u-minWidth-45 u-widthPercent-100  _c-area-bar__padding--dataTable-init">
+        <div class="c-area u-widthPercent-100">
+            <div class="c-area__header">
+                <h3> Returns</h3>
+                <small>An overview of all returns in different statuses that might require your attention</small>
+            </div>
+            <div class="c-area__table">
+                                    <div class="c-area__table__title text-bold">
+                                                    <div class="o-button-ddl o-button-ddl--float-right" tabindex="1">
+                                <i class="fa fa-chevron-down o-button-ddl__icon"></i>Visible columns                                <ul class="o-button-ddl__list js-table-column-toggle" data-table="returns-service-settlement--table">
+                                                                                <li class="o-button-ddl__list__item"
+                                                data-name="ReturnId">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Request ID                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="ReturnReference">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Return reference                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="OrderNumber">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Order number                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="OrganizationName">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Organization                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="CustomerAddressee">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Customer name                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="CustomerEmail">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Contact email                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="Country">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Country                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="Language">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Language                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="Channel">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Return type                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="ShipmentCarrierName">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Carrier                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="ProcessingType">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Processing type                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="WorkflowProfileName">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Workflow                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="Status">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Status                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="CreatedAt">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Creation date                                                </a>
+                                            </li>
+                                                                                        <li class="o-button-ddl__list__item"
+                                                data-name="UpdatedAt">
+                                                <a href="" class="o-button-ddl__list__item__link">
+                                                    <i class="fa fa-check-circle"></i> Updated date                                                </a>
+                                            </li>
+                                                                                <li class="o-button-ddl__list__item js-table-column-reset">
+                                        <a href="" class="o-button-ddl__list__item__link">
+                                            Reset to default                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                                            </div>
+                                <div class="c-area__table__body">
+                    <div class='dataTable__block' data-table-container="returns-service-settlement--table"
+                         style="visibility:hidden;width:100%;">
+
+
+
+
+
+
+
+
+
+                        <table id="returns-service-settlement--table" cellpadding="0" cellspacing="0" width="100%"
+                               class="dataTable-table display nowrap hover">
+                            <thead>
+                            <tr class="title-bar">
+                                <th class='dt-head-left u-tooltip-datatable-header' title='The ID of the return request before an RMA number has been assigned'>Request ID</th><th class='dt-head-left u-tooltip-datatable-header' title='The unique RMA number for the return'>Return reference</th><th class='dt-head-left u-tooltip-datatable-header' title='The order number at which the products have been purchased'>Order number</th><th class='dt-head-left u-tooltip-datatable-header' title='The company to which the user belongs'>Organization</th><th class='dt-head-left u-tooltip-datatable-header' title='The user that has created the return'>Customer name</th><th class='dt-head-left u-tooltip-datatable-header' title='The email address of the user'>Contact email</th><th class='dt-head-left u-tooltip-datatable-header' title='The country from where the products are returned'>Country</th><th class='dt-head-left u-tooltip-datatable-header' title='The language of the user who has created the return'>Language</th><th class='dt-head-left u-tooltip-datatable-header' title='Channel'>Return type</th><th class='dt-head-left u-tooltip-datatable-header' title='ShipmentCarrierName'>Carrier</th><th class='dt-head-left u-tooltip-datatable-header' title='The process in the destination in which the return will be received'>Processing type</th><th class='dt-head-left u-tooltip-datatable-header' title='WorkflowProfileName'>Workflow</th><th class='dt-head-left u-tooltip-datatable-header' title='Status'>Status</th><th class='dt-head-left u-tooltip-datatable-header' title='The date the return has been created'>Creation date</th><th class='dt-head-left u-tooltip-datatable-header' title='The most recent date the return has been updated'>Updated date</th><th class='dt-head-left ' title=''></th><th class='dt-head-left ' title=''></th>                            </tr>
+
+                            </thead>
+                            <tbody>
+<tr>
+<td>7463527</td>
+<td>123456</td>
+<td>999</td>
+<td>Philips</td>
+<td>Pietje Puk</td>
+<td>puk@example.org</td>
+<td>The Netherlands</td>
+<td>Dutch</td>
+<td>ALL-IN</td>
+<td>"DHL"</td>
+<td>"Quick;and;dirty"</td>
+<td>Returns</td>
+<td>Received</td>
+<td>2018-11-06 21:43:12</td>
+<td>2018-11-07 23:35:36</td>
+<td>???</td><td>???</td>
+</tr>
+<tr>
+<td>6564564654</td>
+<td>454564</td>
+<td>9898</td>
+<td>Philips</td>
+<td>Pietje Puk</td>
+<td>puk@example.org</td>
+<td>The Netherlands</td>
+<td>Dutch</td>
+<td>ALL-IN</td>
+<td>"DHL"</td>
+<td>"Quick;and;dirty"</td>
+<td>Returns</td>
+<td>Received</td>
+<td>2017-11-06 21:43:12</td>
+<td>2017-11-07 23:35:36</td>
+<td>???</td><td>???</td>
+</tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr class='filter-bar'>
+                                <th class=' ReturnId'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-number" placeholder="Request ID" type="text" value="" name="returns-service-settlement--table_filter_ReturnId" id="returns-service-settlement--table_filter_ReturnId" /></th><th class=' ReturnReference'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-number" placeholder="Return reference" type="text" value="" name="returns-service-settlement--table_filter_ReturnReference" id="returns-service-settlement--table_filter_ReturnReference" /></th><th class=' OrderNumber'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-number" placeholder="Order number" type="text" value="" name="returns-service-settlement--table_filter_OrderNumber" id="returns-service-settlement--table_filter_OrderNumber" /></th><th class=' OrganizationName'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Organization" type="text" value="" name="returns-service-settlement--table_filter_OrganizationName" id="returns-service-settlement--table_filter_OrganizationName" /></th><th class=' CustomerAddressee'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Customer name" type="text" value="" name="returns-service-settlement--table_filter_CustomerAddressee" id="returns-service-settlement--table_filter_CustomerAddressee" /></th><th class=' CustomerEmail'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Contact email" type="text" value="" name="returns-service-settlement--table_filter_CustomerEmail" id="returns-service-settlement--table_filter_CustomerEmail" /></th><th class=' Country'  rowspan='1' rowspan='1'><select class="form-select datatable-search datatable-filter-dropdown" placeholder="Country" multiple="multiple" name="returns-service-settlement--table_filter_Country[]" id="returns-service-settlement--table_filter_Country">
+<option value="NL">Netherlands</option>
+</select></th><th class=' Language'  rowspan='1' rowspan='1'><select class="form-select datatable-search datatable-filter-dropdown" placeholder="Language" multiple="multiple" name="returns-service-settlement--table_filter_Language[]" id="returns-service-settlement--table_filter_Language">
+<option value="nl">Dutch</option>
+<option value="en">English</option>
+</select></th><th class=' Channel'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Return type" type="text" value="" name="returns-service-settlement--table_filter_Channel" id="returns-service-settlement--table_filter_Channel" /></th><th class=' ShipmentCarrierName'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Carrier" type="text" value="" name="returns-service-settlement--table_filter_ShipmentCarrierName" id="returns-service-settlement--table_filter_ShipmentCarrierName" /></th><th class=' ProcessingType'  rowspan='1' rowspan='1'><select class="form-select datatable-search datatable-filter-dropdown" placeholder="Processing type" multiple="multiple" name="returns-service-settlement--table_filter_ProcessingType[]" id="returns-service-settlement--table_filter_ProcessingType">
+<option value="recover">recover</option>
+<option value="repair">repair</option>
+<option value="restock">restock</option>
+</select></th><th class=' WorkflowProfileName'  rowspan='1' rowspan='1'><select class="form-select datatable-search datatable-filter-dropdown" placeholder="Workflow" multiple="multiple" name="returns-service-settlement--table_filter_WorkflowProfileName[]" id="returns-service-settlement--table_filter_WorkflowProfileName">
+<option value="3000119">Customer Cancellations</option>
+<option value="3000121">Philips Cancellations</option>
+<option value="3000120">Warranty</option>
+</select></th><th class=' Status'  rowspan='1' rowspan='1'><input class="form-input datatable-search datatable-filter-string" placeholder="Status" type="text" value="" name="returns-service-settlement--table_filter_Status" id="returns-service-settlement--table_filter_Status" /></th><th class=' CreatedAt'  rowspan='1' rowspan='1'><div class="form-select datatable-search datatable-filter-date">
+                                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                                        <span>&nbsp;</span> <i class="fa fa-caret-down"></i>
+                                                                   </div></th><th class=' UpdatedAt'  rowspan='1' rowspan='1'><div class="form-select datatable-search datatable-filter-date">
+                                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                                        <span>&nbsp;</span> <i class="fa fa-caret-down"></i>
+                                                                   </div></th><th class='additionalColumn actionButtons nopadding'  rowspan='1' rowspan='1'></th><th class='additionalColumn details'  rowspan='1' rowspan='1'></th>
+
+                            </tr>
+                                                        </tfoot>
+                        </table>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<div class="c-right area--exist" data-area="widgetbar_right">
+
+<div class="c-right__widget">
+    <div class="c-right__widget__title">
+        <a href="" class="c-right__widget__title__toggle js-close-widgetpanel">
+            <i class="fal fa-fw fa-arrow-square-right"></i>
+        </a>
+        <h3 class="c-right__widget__title__tag">
+            Widget panel         </h3>
+    </div>
+
+    <div class="c-widget c-area">
+        <div class="c-area__header">
+            <h3>Search for users</h3>
+            <small>Search for users by name or email</small>
+        </div>
+        <div class="c-area__header o-form">
+            <label class="o-form__label">
+                <input type="text" class="o-form__label__field js-find-user-search"
+                       data-url="/agent/user/findUserSearch" placeholder="Search for users by name or email" />
+            </label>
+        </div>
+        <div class="c-area__list" data-area="find_user_result">
+
+
+        </div>
+    </div>
+</div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div data-remodal-container="mainModal">
+</div>
+<script>!function(e,l,v,i,o,n){e[i]||(e[i]={}),e[i].account_id=n;var g,h;g=l.createElement(v),g.type="text/javascript",g.async=1,g.src=o+n,h=l.getElementsByTagName(v)[0],h.parentNode.insertBefore(g,h);e[i].q=[];e[i].on=function(z,y){e[i].q.push([z,y])}}(window,document,"script","_elev","https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=","58b4b8577ccc4");</script>
+<script>
+    window._elev.on('load', function(_elev) {
+        _elev.setUser({
+            first_name: 'Hannah',
+            last_name: 'Verhoeff',
+            email: 'hannah.verhoeff@philips.com',
+            user_hash: '9a47817f96a0c72ed5cee1cde296e60df1c72d08dd8d607534feb7075fd936c5'
+        });
+    });
+</script>
+<script type="text/javascript" src="/assets/libs/Table/Mic.Table.Bundle-0ce1ca0a10c8c5e69012c88802af042298c1c75d.js"></script>
+<script type="text/javascript" src="/assets/libs/TinyMce/TinyMce.Bundle-712512694196aec772c74dec98fb0b7b5ca22727.js"></script>
+<script type="text/javascript" src="/assets/libs/TinyMce/TinyMce.Bundle-14d4dd797faf369837343ccc92dea8fdacce282c.js"></script>
+<script type="text/javascript" src="/assets/libs/Agent/Agent.Bundle-466bb482d88267d5a453396be6ba37291c449352.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+$(function () {MIC.init(MIC_INIT_OBJ);});
+$(document).ready(function(){MIC.call("table","register",{"id":"returns-service-settlement--table","settings":{"class":"display nowrap hover","paging":{"enabled":true,"default":25,"showInfo":true,"pagingType":"simple_numbers","allowed":{"10":10,"25":25,"50":50,"100":100,"250":250,"500":500,"-1":"All"}},"header":{"showColumnTitles":true,"showColumnTooltips":true,"showHeaderBar":true,"showTopBar":true,"buttons":[],"buttonOptions":{"className":"buttons","enabled":false}},"footer":{"showColumnTitles":false},"search":{"enabled":false},"filter":{"enabled":true,"autocomplete":true,"ajaxAutcompleteUrl":"\/agent\/service\/returns\/tableAutoComplete?tableId=returns-service-settlement--table&filter=returns-service-settlement--table"},"ordering":{"enabled":true,"multiColumn":true},"reorderingColumns":{"enabled":false},"toggleableColumns":{"enabled":true,"url":"\/agent\/service\/returns\/tableColumnState?tableId=returns-service-settlement--table&filter=returns-service-settlement--table","resetUrl":"\/agent\/service\/returns\/tableColumnStateReset?tableId=returns-service-settlement--table&filter=returns-service-settlement--table"},"fixedHeader":{"enabled":false},"toggleableViewModus":{"enabled":true,"default":"compact"},"rowDetailsView":{"enabled":false,"openOnRowClick":true,"openOnCellClick":false,"url":false,"params":[],"view":false,"table":false,"wrapperStartHtml":"","wrapperEndHtml":"","slideAnimation":true},"scroller":{"enabled":false,"scrollY":false,"scrollX":true,"scrollCollapse":true,"displayBuffer":40,"boundaryScale":0.25},"select":{"enabled":false,"style":"api","showInfo":true},"checkboxes":{"enabled":false,"selectRow":true,"afterAdditionalColumnsLeft":false,"attribute":"ReturnId"},"exportButtons":{"enabled":true,"types":{"copy":false,"csv":{"text":"csv"},"excel":{"text":"excel"},"pdf":false},"options":{"title":"*","filename":"Export","header":true,"footer":false,"charset":"UTF-8","enabled":true,"className":"exportButton o-button-ddl__list__item"}}},"columns":{"ReturnId":{"type":"number","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Request ID","description":"The ID of the return request before an RMA number has been assigned","placeholder":false,"icon":false,"width":"80px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"ReturnId","name":"ReturnId","className":" ReturnId","type":"html-num","dVisible":false},"options":[],"fixed":false},"ReturnReference":{"type":"number","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Return reference","description":"The unique RMA number for the return","placeholder":false,"icon":false,"width":"140px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"ReturnReference","name":"ReturnReference","className":" ReturnReference","type":"html-num","dVisible":true},"options":[],"fixed":false},"OrderNumber":{"type":"number","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Order number","description":"The order number at which the products have been purchased","placeholder":false,"icon":false,"width":"130px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"OrderNumber","name":"OrderNumber","className":" OrderNumber","type":"html-num","dVisible":false},"options":[],"fixed":false},"OrganizationName":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Organization","description":"The company to which the user belongs","placeholder":false,"icon":false,"width":"120px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"OrganizationName","name":"OrganizationName","className":" OrganizationName","type":"html","dVisible":false},"options":[],"fixed":false},"CustomerAddressee":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Customer name","description":"The user that has created the return","placeholder":false,"icon":false,"width":"120px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"CustomerAddressee","name":"CustomerAddressee","className":" CustomerAddressee","type":"html","dVisible":true},"options":[],"fixed":false},"CustomerEmail":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Contact email","description":"The email address of the user","placeholder":false,"icon":false,"width":"200px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"CustomerEmail","name":"CustomerEmail","className":" CustomerEmail","type":"html","dVisible":false},"options":[],"fixed":false},"Country":{"type":"dropdown","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Country","description":"The country from where the products are returned","placeholder":false,"icon":false,"width":"120px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"Country","name":"Country","className":" Country","type":"html","dVisible":false},"options":{"NL":"Netherlands"},"fixed":false},"Language":{"type":"dropdown","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Language","description":"The language of the user who has created the return","placeholder":false,"icon":false,"width":"120px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"Language","name":"Language","className":" Language","type":"html","dVisible":false},"options":{"nl":"Dutch","en":"English"},"fixed":false},"Channel":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Return type","description":"Channel","placeholder":false,"icon":false,"width":"110px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"Channel","name":"Channel","className":" Channel","type":"html","dVisible":true},"options":[],"fixed":false},"ShipmentCarrierName":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Carrier","description":"ShipmentCarrierName","placeholder":false,"icon":false,"width":"120px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"ShipmentCarrierName","name":"ShipmentCarrierName","className":" ShipmentCarrierName","type":"html","dVisible":false},"options":[],"fixed":false},"ProcessingType":{"type":"dropdown","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Processing type","description":"The process in the destination in which the return will be received","placeholder":false,"icon":false,"width":"130px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"ProcessingType","name":"ProcessingType","className":" ProcessingType","type":"html","dVisible":false},"options":{"recover":"recover","repair":"repair","restock":"restock"},"fixed":false},"WorkflowProfileName":{"type":"dropdown","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Workflow","description":"WorkflowProfileName","placeholder":false,"icon":false,"width":"110px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"WorkflowProfileName","name":"WorkflowProfileName","className":" WorkflowProfileName","type":"html","dVisible":false},"options":{"3000119":"Customer Cancellations","3000121":"Philips Cancellations","3000120":"Warranty"},"fixed":false},"Status":{"type":"string","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Status","description":"Status","placeholder":false,"icon":false,"width":"130px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"Status","name":"Status","className":" Status","type":"html","dVisible":true},"options":[],"fixed":false},"CreatedAt":{"type":"date","format":{"date":"d-m-Y","jsdate":"DD-MM-YYYY"},"extendedDateRanges":true,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Creation date","description":"The date the return has been created","placeholder":false,"icon":false,"width":"85px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"CreatedAt","name":"CreatedAt","className":" CreatedAt","type":"date","dVisible":true},"options":[],"fixed":false},"UpdatedAt":{"type":"date","format":{"date":"d-m-Y","jsdate":"DD-MM-YYYY"},"extendedDateRanges":true,"showTimePicker":false,"fetchModelValue":true,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"Updated date","description":"The most recent date the return has been updated","placeholder":false,"icon":false,"width":"85px","visible":true,"toggleable":true,"orderable":true,"searchable":true,"filterable":true,"data":"UpdatedAt","name":"UpdatedAt","className":" UpdatedAt","type":"date","dVisible":true},"options":[],"fixed":false},"actionButtons":{"type":"other","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":false,"countModelValue":false,"dataAttribute":false,"data":"<div class=\"o-multi-button js-hover-intent\">\n                                    <span class=\"o-multi-button__title u-colored-white u-colored--bordered u-colored-white--hover-highlight\">\n                                Actions<i class=\"fal fa-fw fa-caret-down\"><\/i><\/span><\/div>","autoSearchOptions":false,"settings":{"title":"","description":false,"placeholder":false,"icon":false,"width":"90px","visible":true,"toggleable":false,"orderable":false,"searchable":false,"filterable":true,"data":"actionButtons","name":"actionButtons","className":"additionalColumn actionButtons nopadding","type":"html","dVisible":true},"options":[],"fixed":true,"showFn":false},"details":{"type":"other","format":false,"extendedDateRanges":false,"showTimePicker":false,"fetchModelValue":false,"countModelValue":false,"dataAttribute":false,"data":false,"autoSearchOptions":false,"settings":{"title":"","description":false,"placeholder":false,"icon":false,"width":"50px","visible":true,"toggleable":false,"orderable":false,"searchable":false,"filterable":true,"data":"details","name":"details","className":"additionalColumn details","type":"html","dVisible":true},"options":[],"fixed":true,"showFn":false}},"data":{"data":[],"recordsTotal":0,"recordsFiltered":0,"draw":0},"datatableOptions":{"sDom":"f<\"dataTable_header\"B>rt<\"dataTable_footer\"lpi><\"clear\">","autoWidth":false,"responsive":false,"deferRender":true,"stateSave":false,"language":{"emptyTable":"No data available in the table overview","info":"Showing _START_ to _END_ of _TOTAL_ entries","infoEmpty":"Showing 0 to 0 of 0 entries","infoFiltered":"(filtered from _MAX_ total entries)","lengthMenu":"_MENU_","loadingRecords":"Loading...","processing":"<i class=\"fa fa-circle-o-notch fa-spin\"><\/i> Loading your items...","search":"Search:","zeroRecords":"No matching items found","paginate":{"first":"First","last":"Last","next":"Next","previous":"Previous"},"aria":{"sortAscending":": Activate to sort ascending","sortDescending":": Activate to sort descending"}},"destroy":true,"columnDefs":[],"paging":true,"bLengthChange":true,"pageLength":25,"bInfo":true,"pagingType":"simple_numbers","lengthMenu":[[10,25,50,100,250,500,-1],[10,25,50,100,250,500,"All"]],"ordering":true,"orderMulti":true,"colReorder":{"realtime":true,"fixedColumnsLeft":0,"fixedColumnsRight":2},"OrderCellsTop":true,"fixedHeader":false,"searching":true,"scrollX":true,"scrollCollapse":true,"order":[[1,"desc"]],"buttons":[{"title":"*","filename":"Export","header":true,"footer":false,"charset":"UTF-8","enabled":true,"className":"exportButton o-button-ddl__list__item","text":"csv","extend":"csvHtml5","exportOptions":{"columns":":not(.additionalColumn):not(.dt-checkboxes-cell):visible"}},{"title":"*","filename":"Export","header":true,"footer":false,"charset":"UTF-8","enabled":true,"className":"exportButton o-button-ddl__list__item","text":"excel","extend":"excelHtml5","exportOptions":{"columns":":not(.additionalColumn):not(.dt-checkboxes-cell):visible"}}],"fixedColumns":{"leftColumns":false,"rightColumns":2,"heightMatch":"auto"},"rowId":"ReturnId","processing":true,"serverSide":true,"deferLoading":[0,0],"ajax":{"url":"\/agent\/service\/returns\/tableData?tableId=returns-service-settlement--table&filter=returns-service-settlement--table","type":"POST"},"ajaxAutcompleteUrl":"\/agent\/service\/returns\/tableAutoComplete?tableId=returns-service-settlement--table&filter=returns-service-settlement--table","pk":"ReturnId","rowActions":{"actionButtons":{"details":{"params":{"0":"returnId","redirect":"%2Fagent%2Fservice%2Freturns%2Findex%3Ffilter%3Dreturns-service-settlement--table"},"title":"Return details","icon":"fa fa-eye","class":"c-quick-actions__list__item__link js-open-page-link","active":true},"authorization":{"params":["returnId"],"title":"Authorize request","icon":"fa fa-thumbs-up","class":"c-quick-actions__list__item__link js-open-page-link","active":true,"type":"workflowtransition","action":"approve"},"rejection":{"params":["returnId"],"title":"Reject request","icon":"fa fa-thumbs-down","class":"c-quick-actions__list__item__link js-open-page-link","active":true,"type":"workflowtransition","action":"reject"},"resubmit":{"params":["returnId"],"title":"Resubmit request","icon":"fa fa-repeat","class":"c-quick-actions__list__item__link js-open-page-link","active":true,"type":"workflowtransition","action":"resubmit"},"complete":{"params":["returnId"],"title":"Complete return","icon":"fa fa-check","class":"c-quick-actions__list__item__link js-open-page-link","active":true,"type":"workflowtransition","action":"complete"},"cancel":{"params":["returnId"],"title":"Cancel return","icon":"fa fa-ban","class":"c-quick-actions__list__item__link js-open-page-link","active":true,"type":"workflowtransition","action":"cancel"}}}}});});
+/*]]>*/
+</script>
+</body>
+</html>

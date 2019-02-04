@@ -1,0 +1,52 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: #808080;
+}
+#container {
+    position:absolute;
+    left:25%;
+    width:50%;
+    background-color: black;
+    border-radius: 2%;
+}
+.color {
+    width:44%;
+    height:44%;
+    text-align:center;
+    color: black;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: #404040 !important;
+}
+
+#yellow {
+    background-color: yellow;
+    position:absolute;
+    left:4%;
+    top:4%;
+}
+
+#blue {
+    background-color: blue;
+    position:absolute;
+    left:52%;
+    top:4%;
+}
+
+#green {
+    background-color: green;
+    position:absolute;
+    left:4%;
+    top:52%;
+}
+
+#red {
+    background-color: red;
+    position:absolute;
+    left:52%;
+    top:52%;
+}
+
