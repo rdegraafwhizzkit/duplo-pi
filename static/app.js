@@ -29,4 +29,12 @@ $(function() {
     });
     resize($('#container'));
 
+    $('#start').click(function(){
+        socket.emit('start', {data: $('#loop').val()});
+    })
+
+    $('#stop').click(function(){
+        socket.emit('stop');
+    })
+
 })

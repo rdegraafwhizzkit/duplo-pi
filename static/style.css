@@ -24,31 +24,53 @@ body {
 	opacity: 0.2;
 }
 
-#yellow {
-    background-color: yellow;
-    position:absolute;
-    left:4%;
-    top:4%;
-}
-
 #blue {
     background-color: blue;
     position:absolute;
-    left:52%;
-    top:4%;
-}
-
-#green {
-    background-color: green;
-    position:absolute;
     left:4%;
-    top:52%;
+    top:4%;
 }
 
 #red {
     background-color: red;
     position:absolute;
     left:52%;
+    top:4%;
+}
+
+#yellow {
+    background-color: yellow;
+    position:absolute;
+    left:4%;
     top:52%;
 }
 
+#green {
+    background-color: green;
+    position:absolute;
+    left:52%;
+    top:52%;
+}
+
+#a {
+    width:100%;
+}
+
+.button {
+    background:black;
+    color:grey;
+    padding:5 20 5 20px;
+    border-radius: 5px;
+    border:1px solid white;
+    text-transform:uppercase;
+    font-family:verdana,arial;
+}
+.button:hover {
+    cursor:pointer;
+    color:white;
+}
+.button:active:hover {
+    cursor:pointer;
+    color:grey;
+    border:1px solid grey;
+}

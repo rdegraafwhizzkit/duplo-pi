@@ -13,6 +13,12 @@ class AbstractSync(ABC):
         self.do()
         return self.status
 
+    def set(self, status):
+        print(status)
+        self.status=status
+        self.do()
+        return self.status
+
     @abstractmethod
     def do(self):
         pass

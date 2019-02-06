@@ -28,11 +28,13 @@ class PISync(AbstractSync):
         self.status = status
         GPIO.setmode(GPIO.BOARD)
         for color, channel_mode in channels.items():
-            print('Setting up color {}'.format(color))
             GPIO.setup(channel_mode['channel'], channel_mode['mode'])
         atexit.register(self.cleanup)
 
     def do(self):
+        for color, channel_mode in channels.items():
+            GPIO.output(channels[color]['channel'], GPIO.LOW)
+
         for color, value in self.status.items():
             if color in channels:
                 GPIO.output(channels[color]['channel'], GPIO.HIGH if value else GPIO.LOW)
