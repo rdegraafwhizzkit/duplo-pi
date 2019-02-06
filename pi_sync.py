@@ -23,8 +23,9 @@ channels = {
 
 
 class PISync(AbstractSync):
-    def __init__(self):
+    def __init__(self, status={}):
         super().__init__()
+        self.status = status
         GPIO.setmode(GPIO.BOARD)
         for color, channel_mode in channels.items():
             print('Setting up color {}'.format(color))

@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 
 class AbstractSync(ABC):
 
-    def __init__(self):
-        self.status={}
+    def __init__(self, status={}):
+        self.status = status
         super().__init__()
 
     def sync(self, color=None):

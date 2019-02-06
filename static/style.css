@@ -19,7 +19,9 @@ body {
 }
 
 .black {
-    background-color: #404040 !important;
+    xbackground-color: #404040 !important;
+    filter: alpha(opacity=20);
+	opacity: 0.2;
 }
 
 #yellow {

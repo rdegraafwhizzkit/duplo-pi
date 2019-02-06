@@ -15,7 +15,7 @@ function sync(state) {
 
 $(function() {
 
-    namespace = '/test';
+    namespace = '/duplopi';
     var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
     $('.color').click(function(){
         socket.emit('sync_one', {data: $(this).attr('id')});
@@ -23,12 +23,10 @@ $(function() {
     socket.on('sync_response', function(msg) {
         sync(msg.data);
     });
-    socket.emit('sync_all');
 
     $(window).resize(function() {
         resize($('#container'));
     });
-
     resize($('#container'));
 
 })
