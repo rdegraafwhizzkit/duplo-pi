@@ -1,6 +1,6 @@
 function resize(e) {
     e.css({'height':e.width()+'px'});
-    e.css({'top':((window.innerHeight-e.width())/2)+'px'})
+//    e.css({'top':((window.innerHeight-e.width())/2)+'px'})
 }
 
 function sync(state) {
@@ -25,9 +25,9 @@ $(function() {
     });
 
     $(window).resize(function() {
-        resize($('#container'));
+        resize($('#container_direct'));
     });
-    resize($('#container'));
+    resize($('#container_direct'));
 
     $('#start').click(function(){
         rows=[];
@@ -60,7 +60,7 @@ $(function() {
 
     $(document).on('click', '.remove', function(){
         if($('.row').length>1) {
-            $(this).parent().remove();
+            $(this).parent().parent().remove();
         }
         if($('.row').length==1) {
             $('.remove').hide();

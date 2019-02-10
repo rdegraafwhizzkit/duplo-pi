@@ -7,29 +7,34 @@
         <link rel="icon" type="image/png" href="/static/favicon.png">
     </head>
     <body>
-        <a id="toggle" class="button">toggle</a>
-        <div id="container" class="toggle">
+        <div id="choice">
+            <div>
+                <a id="toggle" class="button">toggle</a>
+            </div>
+        </div>
+        <div id="container_direct" class="toggle">
             <div id="blue" class="color black"></div>
             <div id="red" class="color black"></div>
             <div id="yellow" class="color black"></div>
             <div id="green" class="color black"></div>
         </div>
-        <div id="container2" class="toggle">
-            <textarea id="loop">blue,red,red blue,green,green blue,green red,green red blue,yellow,yellow blue,yellow red,yellow red blue,yellow green,yellow green blue,yellow green red,yellow green red blue,</textarea>
-            <a id="start" class="button">start</a>
-            <a id="stop" class="button">stop</a>
+        <div id="container_loop" class="toggle">
+            <div style="padding:20px">
+                <a id="start" class="button">start</a>
+                <a id="stop" class="button">stop</a>
+            </div>
             <div id="rows">
                 <div class="row">
-                    <div style="float:left">
+                    <div class="left">
                         <div data-color="blue" class="blue check"></div>
                         <div data-color="red" class="red check"></div>
                         <div data-color="yellow" class="yellow check"></div>
                         <div data-color="green" class="green check"></div>
                     </div>
-                    <div style="float:left">
+                    <div class="left">
                         <div class="button_small add">+</div>
                         <div class="button_small remove">-</div>
-                        <select style="width:54px">
+                        <select>
                             <option value="500">0.5</option>
                             <option value="1000" selected>1</option>
                             <option value="2000">2</option>

@@ -1,161 +1,163 @@
 body {
-    margin:0;
-    padding:0;
-    background-color: #808080;
+	margin: 0;
+	padding: 0;
+	background-color: #808080;
 }
 
 #choice {
-    position:absolute;
-    left:25%;
-    width:50%;
-    background-color: black;
-    border-bottom:1px solid white;
+	position: absolute;
+	left: 25%;
+	width: 50%;
+	background-color: black;
+	border-bottom: 1px solid white;
 }
 
 #container_direct {
-    position:absolute;
-    left:25%;
-    width:50%;
-    top:60px;
-    background-color: black;
-    display:none;
+	position: absolute;
+	left: 25%;
+	width: 50%;
+	top: 60px;
+	background-color: black;
+	display: none;
 }
 
 #container_loop {
-    position:absolute;
-    left:25%;
-    width:50%;
-    top:60px;
-    background-color: black;
+	position: absolute;
+	left: 25%;
+	width: 50%;
+	top: 60px;
+	background-color: black;
 }
 
 .color {
-    width:44%;
-    height:44%;
-    text-align:center;
-    color: black;
-    border-radius: 50%;
+	width: 44%;
+	height: 44%;
+	text-align: center;
+	color: black;
+	border-radius: 50%;
 }
 
 .black {
-    filter: alpha(opacity=20);
+	filter: alpha(opacity=20);
 	opacity: 0.2;
 }
 
 #blue {
-    background-color: blue;
-    position:absolute;
-    left:4%;
-    top:4%;
+	background-color: blue;
+	position: absolute;
+	left: 4%;
+	top: 4%;
 }
 
 #red {
-    background-color: red;
-    position:absolute;
-    left:52%;
-    top:4%;
+	background-color: red;
+	position: absolute;
+	left: 52%;
+	top: 4%;
 }
 
 #yellow {
-    background-color: yellow;
-    position:absolute;
-    left:4%;
-    top:52%;
+	background-color: yellow;
+	position: absolute;
+	left: 4%;
+	top: 52%;
 }
 
 #green {
-    background-color: green;
-    position:absolute;
-    left:52%;
-    top:52%;
+	background-color: green;
+	position: absolute;
+	left: 52%;
+	top: 52%;
 }
 
 .button {
-    background:black;
-    color:grey;
-    padding:5 20 5 20px;
-    border-radius: 5px;
-    border:1px solid white;
-    text-transform:uppercase;
-    font-family:verdana,arial;
+	background: black;
+	color: grey;
+	padding: 5 20 5 20px;
+	border-radius: 5px;
+	border: 1px solid white;
+	text-transform: uppercase;
+	font-family: verdana, arial;
 }
 
-.button:hover, .button_small:hover{
-    cursor:pointer;
-    color:white;
+.button:hover,
+.button_small:hover {
+	cursor: pointer;
+	color: white;
 }
 
 .button_small {
-    background:black;
-    color:grey;
-    font-size:32px;
-    line-height:27px;
-    padding:2 2 2 2px;
-    border-radius: 5px;
-    border:1px solid white;
-    text-transform:uppercase;
-    font-family:verdana,arial;
-    height: 35px;
-    width: 47px;
-    text-align:center;
-    margin:2px;
+	background: black;
+	color: grey;
+	font-size: 32px;
+	line-height: 27px;
+	padding: 2 2 2 2px;
+	border-radius: 5px;
+	border: 1px solid white;
+	text-transform: uppercase;
+	font-family: verdana, arial;
+	height: 35px;
+	width: 47px;
+	text-align: center;
+	margin: 2px;
 }
 
-.button:active:hover, .button_small:active:hover{
-    cursor:pointer;
-    color:grey;
-    border:1px solid grey;
+.button:active:hover,
+.button_small:active:hover {
+	cursor: pointer;
+	color: grey;
+	border: 1px solid grey;
 }
 
 .check {
-    border-radius: 25px;
-    width:50px;
-    height:50px;
-    float:left;
-    margin:2px;
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 2px;
 }
 
 .red {
-    background-color:red;
+	background-color: red;
 }
 
 .yellow {
-    clear:both;
-    background-color:yellow;
+	clear: both;
+	background-color: yellow;
 }
 
 .blue {
-    background-color:blue;
+	background-color: blue;
 }
 
 .green {
-    background-color:green;
+	background-color: green;
 }
 
 #rows {
-    width:100%;
-    border-bottom:1px solid white;
-    padding-bottom:5px;
+	width: 100%;
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
 }
 
-.row{
-    background:black;
-    clear:both;
-    margin-top:5px;
-    padding-top:5px;
-    overflow:auto;
-    border-top:1px solid white;
-    padding:20px;
+.row {
+	background: black;
+	clear: both;
+	margin-top: 5px;
+	padding-top: 5px;
+	overflow: auto;
+	border-top: 1px solid white;
+	padding: 20px;
 }
 
 select {
-    width:54px;
+	width: 54px;
 }
 
 .left {
-    float:left;
+	float: left;
 }
 
 #choice div {
-    padding:20px
+	padding: 20px
 }
