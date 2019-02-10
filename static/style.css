@@ -4,22 +4,29 @@ body {
     background-color: #808080;
 }
 
-#container {
+#choice {
     position:absolute;
     left:25%;
     width:50%;
     background-color: black;
-    border-radius: 2%;
+    border-bottom:1px solid white;
+}
+
+#container_direct {
+    position:absolute;
+    left:25%;
+    width:50%;
+    top:60px;
+    background-color: black;
     display:none;
 }
 
-#container2 {
+#container_loop {
     position:absolute;
     left:25%;
     width:50%;
+    top:60px;
     background-color: black;
-    border-radius: 2%;
-    xdisplay:none;
 }
 
 .color {
@@ -72,6 +79,7 @@ body {
     text-transform:uppercase;
     font-family:verdana,arial;
 }
+
 .button:hover, .button_small:hover{
     cursor:pointer;
     color:white;
@@ -83,13 +91,12 @@ body {
     font-size:32px;
     line-height:27px;
     padding:2 2 2 2px;
-    border-radius: 1px;
+    border-radius: 5px;
     border:1px solid white;
     text-transform:uppercase;
     font-family:verdana,arial;
     height: 35px;
     width: 47px;
-    xfloat:left;
     text-align:center;
     margin:2px;
 }
@@ -125,9 +132,6 @@ body {
     background-color:green;
 }
 
-#loop {
-    display:none
-}
 #rows {
     width:100%;
     border-bottom:1px solid white;
@@ -141,4 +145,17 @@ body {
     padding-top:5px;
     overflow:auto;
     border-top:1px solid white;
+    padding:20px;
+}
+
+select {
+    width:54px;
+}
+
+.left {
+    float:left;
+}
+
+#choice div {
+    padding:20px
 }
