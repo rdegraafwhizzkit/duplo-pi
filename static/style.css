@@ -161,3 +161,7 @@ select {
 #choice div {
 	padding: 20px
 }
+
+.padded-left {
+    padding-left: 20px;
+}
