@@ -4,16 +4,41 @@
         <script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="/static/socket.io-1.3.5.min.js"></script>
         <script type="text/javascript" src="/static/app.js"></script>
+        <link rel="icon" type="image/png" href="/static/favicon.png">
     </head>
     <body>
-        <div id="container">
+        <a id="toggle" class="button">toggle</a>
+        <div id="container" class="toggle">
             <div id="blue" class="color black"></div>
             <div id="red" class="color black"></div>
             <div id="yellow" class="color black"></div>
             <div id="green" class="color black"></div>
         </div>
-        <textarea id="loop">blue,red,red blue,green,green blue,green red,green red blue,yellow,yellow blue,yellow red,yellow red blue,yellow green,yellow green blue,yellow green red,yellow green red blue,</textarea>
-        <a id="start" class="button">start</a>
-        <a id="stop" class="button">stop</a>
+        <div id="container2" class="toggle">
+            <textarea id="loop">blue,red,red blue,green,green blue,green red,green red blue,yellow,yellow blue,yellow red,yellow red blue,yellow green,yellow green blue,yellow green red,yellow green red blue,</textarea>
+            <a id="start" class="button">start</a>
+            <a id="stop" class="button">stop</a>
+            <div id="rows">
+                <div class="row">
+                    <div style="float:left">
+                        <div data-color="blue" class="blue check"></div>
+                        <div data-color="red" class="red check"></div>
+                        <div data-color="yellow" class="yellow check"></div>
+                        <div data-color="green" class="green check"></div>
+                    </div>
+                    <div style="float:left">
+                        <div class="button_small add">+</div>
+                        <div class="button_small remove">-</div>
+                        <select style="width:54px">
+                            <option value="500">0.5</option>
+                            <option value="1000" selected>1</option>
+                            <option value="2000">2</option>
+                            <option value="4000">4</option>
+                            <option value="8000">8</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

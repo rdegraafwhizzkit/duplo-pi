@@ -44,9 +44,12 @@ def start(message):
         loop = True
         while loop:
             for data in message['data'].split(","):
-                d = {color.strip(): True for color in data.strip().split(" ")}
+                if not loop:
+                    break
+                colors=data.strip().split(" ")
+                d = {color.strip(): True for color in colors if not color.isnumeric()}
                 emit('sync_response', {'data': sync_object.set({} if '' in d else d)}, broadcast=True)
-                time.sleep(1)
+                time.sleep(int(colors[len(colors)-1])/1000.0)
 
     global loop
     if not loop:

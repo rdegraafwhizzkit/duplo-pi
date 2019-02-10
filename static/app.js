@@ -30,11 +30,48 @@ $(function() {
     resize($('#container'));
 
     $('#start').click(function(){
-        socket.emit('start', {data: $('#loop').val()});
+        rows=[];
+        $('.row').each(function(){
+            colors=[];
+            $(this).find('.check').each(function(){
+                if(!$(this).hasClass('black')) {
+                    colors.push($(this).data('color'));
+                }
+            })
+            colors.push($(this).find("select").val());
+            rows.push(colors.join(' '));
+        })
+        loop=rows.join(',');
+        socket.emit('start', {data: loop});
     })
 
     $('#stop').click(function(){
         socket.emit('stop');
     })
 
+    $('#toggle').click(function(){
+        $('.toggle').toggle();
+    })
+
+    $(document).on('click', '.add', function(){
+        $(this).parent().parent().parent().append($(this).parent().parent().clone(false));
+        $('.remove').show();
+    });
+
+    $(document).on('click', '.remove', function(){
+        if($('.row').length>1) {
+            $(this).parent().remove();
+        }
+        if($('.row').length==1) {
+            $('.remove').hide();
+        }
+    })
+
+    $(document).on('click', '.check', function(){
+        $(this).toggleClass('black');
+    })
+
+    $('.remove').hide();
+
 })
+
