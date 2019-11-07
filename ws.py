@@ -2,10 +2,10 @@ from flask import Flask, copy_current_request_context
 from flask_socketio import SocketIO, emit
 from dummy_sync import DummySync
 from pi_sync import PISync
-import string, random, time
+import os, time
 from threading import Thread
 
-sync_object = PISync({'blue': True, 'green': True}) if True else DummySync({'red': True})
+sync_object = PISync({'blue': True, 'green': True}) if 'Darwin' != os.name else DummySync({'red': True})
 
 app = Flask(__name__, static_url_path='/static')
 app.config[
