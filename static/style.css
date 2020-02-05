@@ -78,6 +78,9 @@ body {
 	border: 1px solid white;
 	text-transform: uppercase;
 	font-family: verdana, arial;
+	min-width:75px;
+	display: inline-block;
+	text-align:center;
 }
 
 .button:hover,

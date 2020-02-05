@@ -1,6 +1,5 @@
 function resize(e) {
     e.css({'height':e.width()+'px'});
-//    e.css({'top':((window.innerHeight-e.width())/2)+'px'})
 }
 
 function sync(state) {
@@ -13,6 +12,38 @@ function sync(state) {
     }
 }
 
+function get_loop() {
+    rows=[];
+    $('.row').each(function(){
+        colors=[];
+        $(this).find('.check').each(function(){
+            if(!$(this).hasClass('black')) {
+                colors.push($(this).data('color'));
+            }
+        })
+        colors.push($(this).find("select").val());
+        rows.push(colors.join(' '));
+    })
+    return rows.join(',');
+}
+
+function get_loop_2() {
+    rows=[];
+    $('.row').each(function(){
+        ret={}
+        colors=[];
+        $(this).find('.check').each(function(){
+            if(!$(this).hasClass('black')) {
+                colors.push($(this).data('color'));
+            }
+        })
+        ret.colors=colors
+        ret.duration=$(this).find("select").val()
+        rows.push(ret)
+    })
+    return rows;
+}
+
 $(function() {
 
     namespace = '/duplopi';
@@ -20,6 +51,16 @@ $(function() {
     $('.color').click(function(){
         socket.emit('sync_one', {data: $(this).attr('id')});
     });
+
+    socket.on('sync_patterns', function(msg) {
+        $('#patterns').empty();
+        localStorage.clear()
+        for(i in msg.data) {
+            localStorage.setItem(msg.data[i].name,JSON.stringify(msg.data[i].pattern));
+            $('#patterns').append('<option value="'+msg.data[i].name+'">'+msg.data[i].name+'</option>');
+        }
+    });
+
     socket.on('sync_response', function(msg) {
         sync(msg.data);
     });
@@ -30,19 +71,15 @@ $(function() {
     resize($('#container_direct'));
 
     $('#start').click(function(){
-        rows=[];
-        $('.row').each(function(){
-            colors=[];
-            $(this).find('.check').each(function(){
-                if(!$(this).hasClass('black')) {
-                    colors.push($(this).data('color'));
-                }
-            })
-            colors.push($(this).find("select").val());
-            rows.push(colors.join(' '));
-        })
-        loop=rows.join(',');
-        socket.emit('start', {data: loop});
+        socket.emit('start', {data: get_loop()});
+    })
+
+    $('#load').click(function(){
+        alert(localStorage.getItem($('#patterns').val()));
+    })
+
+    $('#save').click(function(){
+        socket.emit('save', {name:$('#pattern').val(),pattern:get_loop_2()});
     })
 
     $('#stop').click(function(){
