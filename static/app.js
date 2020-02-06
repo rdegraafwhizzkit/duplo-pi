@@ -66,11 +66,11 @@ $(function() {
   })
 
   $('#load').click(function() {
-//    alert(localStorage.getItem($('#patterns').val()));
+    patterns=JSON.parse(localStorage.getItem($('#patterns').val()));
     $('#rows').empty();
-//    get_duration_select().appendTo('body');
-//    get_colors().appendTo('body');
-    get_row().appendTo('#rows');
+    for(i in patterns) {
+        get_row(patterns[i].duration, patterns[i].colors, patterns.length==1).appendTo('#rows');
+    }
   })
 
   $('#save').click(function() {
