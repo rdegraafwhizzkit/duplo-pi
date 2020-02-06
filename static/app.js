@@ -15,21 +15,6 @@ function sync(state) {
 function get_loop() {
     rows=[];
     $('.row').each(function(){
-        colors=[];
-        $(this).find('.check').each(function(){
-            if(!$(this).hasClass('black')) {
-                colors.push($(this).data('color'));
-            }
-        })
-        colors.push($(this).find("select").val());
-        rows.push(colors.join(' '));
-    })
-    return rows.join(',');
-}
-
-function get_loop_2() {
-    rows=[];
-    $('.row').each(function(){
         ret={}
         colors=[];
         $(this).find('.check').each(function(){
@@ -38,7 +23,7 @@ function get_loop_2() {
             }
         })
         ret.colors=colors
-        ret.duration=$(this).find("select").val()
+        ret.duration=1*$(this).find("select").val()
         rows.push(ret)
     })
     return rows;
@@ -79,7 +64,7 @@ $(function() {
     })
 
     $('#save').click(function(){
-        socket.emit('save', {name:$('#pattern').val(),pattern:get_loop_2()});
+        socket.emit('save', {name:$('#pattern').val(),pattern:get_loop()});
     })
 
     $('#stop').click(function(){
