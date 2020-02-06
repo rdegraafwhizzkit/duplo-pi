@@ -3,6 +3,7 @@
         <link rel="stylesheet" type="text/css" href="/static/style.css">
         <script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="/static/socket.io-1.3.5.min.js"></script>
+        <script type="text/javascript" src="/static/html.js"></script>
         <script type="text/javascript" src="/static/app.js"></script>
         <link rel="icon" type="image/png" href="/static/favicon.png">
     </head>
@@ -25,35 +26,13 @@
             </div>
             <div style="padding:20px">
                 <a id="load" class="button">load</a>
-                <select id="patterns" style="width:200px">
-                    <option value="">---</option>
-                </select>
+                <select id="patterns" style="width:200px"></select>
             </div>
             <div style="padding:20px">
                 <a id="save" class="button">save</a>
                 <input id="pattern" type="text" style="width:200px"/>
             </div>
             <div id="rows">
-                <div class="row">
-                    <div class="left">
-                        <div data-color="blue" class="blue check"></div>
-                        <div data-color="red" class="red check"></div>
-                        <div data-color="yellow" class="yellow check"></div>
-                        <div data-color="green" class="green check"></div>
-                    </div>
-                    <div class="left padded-left">
-                        <div class="button_small add">+</div>
-                        <div class="button_small remove">-</div>
-                        <select>
-                            <option value="100">0.1</option>
-                            <option value="500">0.5</option>
-                            <option value="1000" selected>1</option>
-                            <option value="2000">2</option>
-                            <option value="4000">4</option>
-                            <option value="8000">8</option>
-                        </select>
-                    </div>
-                </div>
             </div>
         </div>
     </body>
