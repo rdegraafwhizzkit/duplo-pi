@@ -2,14 +2,17 @@ from flask import Flask, copy_current_request_context
 from flask_socketio import SocketIO, emit
 from dummy_sync import DummySync
 from pi_sync import PISync
-import os, time, json, glob
+import os
+import time
+import json
+import glob
 from threading import Thread
 
 sync_object = PISync({'blue': True, 'green': True}) if 'Darwin' != os.name else DummySync({'red': True})
 
 app = Flask(__name__, static_url_path='/static')
 app.config[
-    'SECRET_KEY'] = '9fAgMmc9hl6VXIsFu3ddb5MJ2U86qEad'  # ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
+    'SECRET_KEY'] = '9fAgMmc9hl6VXIsFu3ddb5MJ2U86qEad'
 socketio = SocketIO(app, async_mode=None)
 namespace = '/duplopi'
 
@@ -46,6 +49,8 @@ def on_connect():
 def sync_all():
     emit('sync_response', {'data': sync_object.sync()}, broadcast=False)
     emit('sync_patterns', {'data': load()}, broadcast=True)
+    global loop
+    emit('loop_status', {'data': 'started' if loop else 'stopped'}, broadcast=True)
 
 
 @socketio.on('sync_one', namespace=namespace)
@@ -56,11 +61,12 @@ def sync_one(message):
 @socketio.on('start', namespace=namespace)
 def start(message):
     @copy_current_request_context
-    def loop_thread(message):
+    def loop_thread(pattern):
         global loop
         loop = True
         while loop:
-            for data in message['data']:
+            emit('loop_status', {'data': 'started'}, broadcast=True)
+            for data in pattern['data']:
                 if not loop:
                     break
                 colors = data['colors']
@@ -78,6 +84,7 @@ def start(message):
 def stop():
     global loop
     loop = False
+    emit('loop_status', {'data': 'stopped'}, broadcast=True)
 
 
 if __name__ == '__main__':

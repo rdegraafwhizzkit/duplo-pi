@@ -50,6 +50,19 @@ $(function() {
     }
   });
 
+  socket.on('loop_status', function(msg) {
+    switch(String(msg.data)) {
+      case 'stopped':
+        $('#start').show();
+        $('#stop').hide();
+        break;
+      case 'started':
+        $('#start').hide();
+        $('#stop').show();
+        break;
+    }
+  });
+
   socket.on('sync_response', function(msg) {
     sync(msg.data);
   });
@@ -107,5 +120,6 @@ $(function() {
   })
 
   get_row(1000,[],true).appendTo('#rows');
+  $('#stop').hide();
 
 })
