@@ -102,7 +102,10 @@ $(function() {
   })
 
   $(document).on('click', '.add', function() {
-    $(this).parent().parent().parent().append($(this).parent().parent().clone(false));
+    add=$(this).parent().parent().clone(false);
+    value=$(this).parent().find('select').val()
+    add.find('select').val(value);
+    $(this).parent().parent().parent().append(add);
     $('.remove').show();
   });
 
