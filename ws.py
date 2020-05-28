@@ -2,18 +2,21 @@ from flask import Flask, copy_current_request_context
 from flask_socketio import SocketIO, emit
 from dummy_sync import DummySync
 from pi_sync import PISync
+from threading import Thread
+from ws_helpers import random_string, load
 import os
 import time
 import json
-import glob
-from threading import Thread
 
 sync_object = PISync({'blue': True, 'green': True}) if 'Darwin' != os.name else DummySync({'red': True})
 
 app = Flask(__name__, static_url_path='/static')
-app.config[
-    'SECRET_KEY'] = '9fAgMmc9hl6VXIsFu3ddb5MJ2U86qEad'
-socketio = SocketIO(app, async_mode=None)
+app.config['SECRET_KEY'] = random_string(32)
+socketio = SocketIO(
+    app,
+    async_mode=None,
+    cookie=False
+)
 namespace = '/duplopi'
 
 loop = False
@@ -22,14 +25,6 @@ loop = False
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
-
-
-def load():
-    ret = []
-    for pattern in glob.glob("patterns/*.json"):
-        with open(pattern, 'r') as j:
-            ret.append(json.load(j))
-    return sorted(ret, key=lambda i: i['name'])
 
 
 @socketio.on('save', namespace=namespace)
@@ -88,7 +83,6 @@ def stop():
 
 
 if __name__ == '__main__':
-    load()
     socketio.run(
         app,
         debug=False,
