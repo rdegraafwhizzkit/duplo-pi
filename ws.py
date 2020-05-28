@@ -4,14 +4,16 @@ from dummy_sync import DummySync
 from pi_sync import PISync
 from threading import Thread
 from ws_helpers import random_string, load
+from ws_routes import static_html
 import os
 import time
 import json
 
 sync_object = PISync({'blue': True, 'green': True}) if 'Darwin' != os.name else DummySync({'red': True})
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 app.config['SECRET_KEY'] = random_string(32)
+app.register_blueprint(static_html)
 socketio = SocketIO(
     app,
     async_mode=None,
@@ -20,11 +22,6 @@ socketio = SocketIO(
 namespace = '/duplopi'
 
 loop = False
-
-
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
 
 
 @socketio.on('save', namespace=namespace)
