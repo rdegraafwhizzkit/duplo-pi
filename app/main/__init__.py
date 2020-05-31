@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_socketio import SocketIO
-from dummy_sync import DummySync
-from pi_sync import PISync
+from backend.sync_objects.dummy_sync import DummySync
+from backend.sync_objects.pi_sync import PISync
 import os
 
 sync_object = PISync({'blue': True, 'green': True}) if 'Darwin' != os.name else DummySync({'red': True})

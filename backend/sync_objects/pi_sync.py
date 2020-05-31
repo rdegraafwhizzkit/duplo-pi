@@ -1,12 +1,12 @@
 import sys
 
 if sys.platform == 'darwin':
-    sys.path.append('stubs')
+    sys.path.append('backend/stubs')
 
 import RPi.GPIO as GPIO
 import atexit
 
-from abstract_sync import AbstractSync
+from .abstract_sync import AbstractSync
 
 # 31 - GPIO06 : Red
 # 33 - GPIO13 : Green
@@ -23,13 +23,15 @@ channels = {
 
 
 class PISync(AbstractSync):
-    def __init__(self, status={}):
+    def __init__(self, status=None):
+        if status is None:
+            status = {}
         super().__init__()
         self.status = status
         GPIO.setmode(GPIO.BOARD)
         for color, channel_mode in channels.items():
             GPIO.setup(channel_mode['channel'], channel_mode['mode'])
-        atexit.register(self.cleanup)
+        atexit.register(PISync.cleanup)
 
     def do(self):
         for color, channel_mode in channels.items():
@@ -39,5 +41,6 @@ class PISync(AbstractSync):
             if color in channels:
                 GPIO.output(channels[color]['channel'], GPIO.HIGH if value else GPIO.LOW)
 
-    def cleanup(self):
+    @staticmethod
+    def cleanup():
         GPIO.cleanup()

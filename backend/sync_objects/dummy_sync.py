@@ -1,4 +1,4 @@
-from abstract_sync import AbstractSync
+from .abstract_sync import AbstractSync
 from pprint import pprint as pp
 
 
